@@ -76,7 +76,7 @@ namespace wf_TicTacToe
 					}//if
 				}//if
 
-			move.PerfomClick();
+			move.PerformClick();
 			}
 
 		private Button look_for_corner()
@@ -111,6 +111,42 @@ namespace wf_TicTacToe
 				if (C1.Text == "")
 					return C1;
 				}
+
+			if(A1.Text=="O")
+				{
+				if (A1.Text == "")
+					return A3;
+				if (A3.Text == "")
+					return A3;
+				if (C3.Text == "")
+					return C3;
+				}
+
+			if (A1.Text == "")
+				return A1;
+			if (A3.Text == "")
+				return A3;
+			if (C1.Text == "")
+				return C1;
+			if (C3.Text == "")
+				return C3;
+
+			return null;
+			}
+		private Button look_for_open_space()
+			{
+			Console.WriteLine("Looking for open space");
+			Button b = null;
+			foreach(Control c in Controls)
+				{
+				b = c as Button;
+				if(b!=null)
+					{
+					if (b.Text == "")
+						return b;
+					}
+				}
+			return null;
 
 			}
 
