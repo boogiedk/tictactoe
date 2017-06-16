@@ -392,7 +392,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.ClientSize = new System.Drawing.Size(348, 341);
+			this.ClientSize = new System.Drawing.Size(348, 344);
 			this.Controls.Add(this.o_win_count);
 			this.Controls.Add(this.draw_count);
 			this.Controls.Add(this.x_win_count);

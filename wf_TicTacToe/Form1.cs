@@ -15,6 +15,7 @@ namespace wf_TicTacToe
 		bool turn = true; // true = X turn; false = Y turn;
 		int turn_count = 0;
 		static String player1, player2;
+		public bool against_computer = false;
 
 		public Form1()
 			{
@@ -212,13 +213,17 @@ namespace wf_TicTacToe
 				label1.Text = player1;
 				label3.Text = player2;
 				}
+
+			if(player2=="bot")
+				against_computer = true;
+				else
+				against_computer=false;
 			}
 		public static Form1 SelfRef
 			{
 			get;
 			set;
 			}
-
 			}
 		}
 
