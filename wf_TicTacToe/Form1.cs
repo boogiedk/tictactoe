@@ -51,7 +51,135 @@ namespace wf_TicTacToe
 			turn_count++;
 
 			checkForWinner();
+
+			if((!turn) && (against_computer))
+				{
+				computer_make_move();
+				}
 			}
+
+		private void computer_make_move() // bot
+			{
+			Button move = null;
+
+			move = look_for_win_or_block("O"); // look for win
+			if (move == null)
+				{
+				move = look_for_win_or_block("X"); // look for block
+				if (move == null)
+					{
+					move = look_for_corner();
+					if (move == null)
+						{
+						move = look_for_open_space();
+						}// if
+					}//if
+				}//if
+
+			move.PerfomClick();
+			}
+
+		private Button look_for_corner()
+			{
+			Console.WriteLine("Looking for corner");
+			if(A1.Text=="O")
+				{
+				if (A3.Text == "")
+					return A3;
+				if (C3.Text == "")
+					return C3;
+				if (C1.Text == "")
+					return C1;
+				}
+
+			if(A3.Text=="O")
+				{
+				if (A1.Text == "")
+					return A1;
+				if (C3.Text == "")
+					return C3;
+				if (C1.Text == "")
+					return C1;
+				}
+
+			if(C3.Text=="O")
+				{
+				if (A1.Text == "")
+					return A1;
+				if (A3.Text == "")
+					return A3;
+				if (C1.Text == "")
+					return C1;
+				}
+
+			}
+
+		private Button look_for_win_or_block(string mark)
+			{
+			Console.WriteLine("Looking for win or block: " + mark);
+			//HORIZONTAL TESTS
+			if ((A1.Text == mark) && (A2.Text == mark) && (A3.Text == ""))
+			return A3;
+			if ((A2.Text == mark) && (A3.Text == mark) && (A1.Text == ""))
+			return A1;
+			if ((A1.Text == mark) && (A3.Text == mark) && (A2.Text == ""))
+			return A2;
+			//
+			if ((B1.Text == mark) && (B2.Text == mark) && (B3.Text == ""))
+				return B3;
+			if ((B2.Text == mark) && (B3.Text == mark) && (B1.Text == ""))
+				return B1;
+			if ((B1.Text == mark) && (B3.Text == mark) && (B2.Text == ""))
+				return B2;
+			//
+			if ((C1.Text == mark) && (C2.Text == mark) && (C3.Text == ""))
+				return C3;
+			if ((C2.Text == mark) && (C3.Text == mark) && (C1.Text == ""))
+				return C1;
+			if ((C1.Text == mark) && (C3.Text == mark) && (C2.Text == ""))
+				return C2;
+
+
+			//VERTICAL TESTS
+			if ((A1.Text == mark) && (B1.Text == mark) && (C1.Text == ""))
+				return C1;
+			if ((B1.Text == mark) && (C1.Text == mark) && (A1.Text == ""))
+				return A1;
+			if ((A1.Text == mark) && (C1.Text == mark) && (B1.Text == ""))
+				return B1;
+			//
+			if ((A2.Text == mark) && (B2.Text == mark) && (C2.Text == ""))
+				return C2;
+			if ((B2.Text == mark) && (C2.Text == mark) && (A2.Text == ""))
+				return A2;
+			if ((A2.Text == mark) && (C2.Text == mark) && (B2.Text == ""))
+				return B2;
+			//
+			if ((A3.Text == mark) && (B3.Text == mark) && (C3.Text == ""))
+				return C3;
+			if ((B3.Text == mark) && (C3.Text == mark) && (A3.Text == ""))
+				return A3;
+			if ((A3.Text == mark) && (C3.Text == mark) && (B3.Text == ""))
+				return B3;
+
+			//DIAGONAL TESTS
+			if ((A1.Text == mark) && (B2.Text == mark) && (C3.Text == ""))
+				return C3;
+			if ((B2.Text == mark) && (C3.Text == mark) && (A1.Text == ""))
+				return A1;
+			if ((A1.Text == mark) && (C3.Text == mark) && (B2.Text == ""))
+				return B2;
+
+			if ((A3.Text == mark) && (B2.Text == mark) && (C1.Text == ""))
+				return C1;
+			if ((B2.Text == mark) && (C1.Text == mark) && (A3.Text == ""))
+				return A3;
+			if ((A3.Text == mark) && (C1.Text == mark) && (B2.Text == ""))
+				return B2;
+
+			return null;
+			}
+
 		private void checkForWinner()
 			{
 			bool there_is_a_winner = false;
