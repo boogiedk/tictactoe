@@ -105,7 +105,7 @@ namespace wf_TicTacToe
 					}
 				else
 					MessageBox.Show(winner + " Wins!", "Congratulations!");
-				newGameForSettings(true);
+				newGame();
 				} // end if
 			else
 				{
@@ -113,7 +113,7 @@ namespace wf_TicTacToe
 					{
 					draw_count.Text = (Int32.Parse(draw_count.Text) + 1).ToString();
 					MessageBox.Show("Draw!");
-					newGameForSettings(true);
+					newGame();
 					}
 				}
 			}//end checkForWinner
@@ -135,28 +135,6 @@ namespace wf_TicTacToe
 						catch { }
 						}//end foreach
 			}// end new game
-
-		public void newGameForSettings(bool start)
-			{
-			bool start_new_game = start;
-				if (start_new_game)
-							{
-							turn = true;
-							turn_count = 0;
-
-							foreach (Control c in Controls)
-								{
-								try
-									{
-									Button b = (Button)c;
-									b.Enabled = true;
-									b.Text = "";
-									}//end try
-								catch { }
-								}//end foreach
-				}
-		 }
-		// end new game
 
 
 		private void disableButtons()
@@ -234,11 +212,6 @@ namespace wf_TicTacToe
 				label1.Text = player1;
 				label3.Text = player2;
 				}
-			}
-		private void gameplayToolStripMenuItem_Click(object sender, EventArgs e)
-			{
-			Form3 f3 = new Form3();
-			f3.ShowDialog();
 			}
 		public static Form1 SelfRef
 			{

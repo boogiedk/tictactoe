@@ -117,7 +117,6 @@
 			this.gameplayToolStripMenuItem.Name = "gameplayToolStripMenuItem";
 			this.gameplayToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
 			this.gameplayToolStripMenuItem.Text = "Gameplay";
-			this.gameplayToolStripMenuItem.Click += new System.EventHandler(this.gameplayToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 

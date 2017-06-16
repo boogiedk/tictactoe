@@ -12,5 +12,4 @@ C:\Users\boogie\documents\visual studio 2013\Projects\wf_TicTacToe\wf_TicTacToe\
 C:\Users\boogie\documents\visual studio 2013\Projects\wf_TicTacToe\wf_TicTacToe\obj\Debug\wf_TicTacToe.TrustInfo.xml
 C:\Users\boogie\documents\visual studio 2013\Projects\wf_TicTacToe\wf_TicTacToe\obj\Debug\wf_TicTacToe.exe.manifest
 C:\Users\boogie\documents\visual studio 2013\Projects\wf_TicTacToe\wf_TicTacToe\obj\Debug\wf_TicTacToe.application
-C:\Users\boogie\documents\visual studio 2013\Projects\wf_TicTacToe\wf_TicTacToe\obj\Debug\wf_TicTacToe.Form3.resources
 C:\Users\boogie\documents\visual studio 2013\Projects\wf_TicTacToe\wf_TicTacToe\obj\Debug\wf_TicTacToe.csprojResolveAssemblyReference.cache
