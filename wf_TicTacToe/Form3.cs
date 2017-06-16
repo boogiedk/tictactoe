@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace wf_TicTacToe
+	{
+	public partial class Form3 : Form
+		{
+		public Form3()
+			{
+			InitializeComponent();
+			}
+
+		private void Form3_Load(object sender, EventArgs e)
+			{
+			checkBox1.Checked = Properties.Settings.Default.chBox;
+			if(checkBox1.Checked==true)
+				{
+				Form1.SelfRef.newGameForSettings(true);
+				}
+			else
+				{
+				Form1.SelfRef.newGameForSettings(false);
+				}
+			}
+
+		private void button1_Click(object sender, EventArgs e)
+			{
+			Properties.Settings.Default.chBox = checkBox1.Checked;
+			Properties.Settings.Default.Save();
+			}
+		}
+	}
