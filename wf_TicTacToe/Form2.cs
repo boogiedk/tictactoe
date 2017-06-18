@@ -28,5 +28,14 @@ namespace wf_TicTacToe
 			if (e.KeyChar.ToString() == "\r")
 				button1.PerformClick();
 			}
+
+		private void botOrPlayer_CheckedChanged(object sender, EventArgs e)
+			{
+			Do_Checked();
+			}
+		private void Do_Checked()
+			{
+			button1.Enabled = botOrPlayer.Checked;
+			}
 		}
 	}

@@ -367,9 +367,12 @@ namespace wf_TicTacToe
 			{
 			Form2 f2 = new Form2();
 			f2.ShowDialog();
-			if (player1 == "" || player2 == "")
+			if (player1 == "")
 				{
 				player1 = "X";
+				}
+			else if(player2=="")
+				{
 				player2 = "O";
 				}
 			else
