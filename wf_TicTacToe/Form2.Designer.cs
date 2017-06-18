@@ -111,7 +111,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-			this.ClientSize = new System.Drawing.Size(338, 144);
+			this.ClientSize = new System.Drawing.Size(348, 375);
 			this.Controls.Add(this.botOrPlayer);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.p2);

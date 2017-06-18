@@ -305,7 +305,7 @@
 			this.label1.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.Color.Fuchsia;
-			this.label1.Location = new System.Drawing.Point(16, 298);
+			this.label1.Location = new System.Drawing.Point(14, 298);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.MaximumSize = new System.Drawing.Size(105, 14);
 			this.label1.MinimumSize = new System.Drawing.Size(105, 14);
@@ -355,7 +355,7 @@
 			this.x_win_count.AutoSize = true;
 			this.x_win_count.BackColor = System.Drawing.Color.Black;
 			this.x_win_count.ForeColor = System.Drawing.Color.Fuchsia;
-			this.x_win_count.Location = new System.Drawing.Point(53, 317);
+			this.x_win_count.Location = new System.Drawing.Point(59, 317);
 			this.x_win_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.x_win_count.Name = "x_win_count";
 			this.x_win_count.Size = new System.Drawing.Size(14, 14);
@@ -367,7 +367,7 @@
 			this.draw_count.AutoSize = true;
 			this.draw_count.BackColor = System.Drawing.Color.Black;
 			this.draw_count.ForeColor = System.Drawing.Color.Fuchsia;
-			this.draw_count.Location = new System.Drawing.Point(164, 317);
+			this.draw_count.Location = new System.Drawing.Point(170, 317);
 			this.draw_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.draw_count.Name = "draw_count";
 			this.draw_count.Size = new System.Drawing.Size(14, 14);
@@ -379,7 +379,7 @@
 			this.o_win_count.AutoSize = true;
 			this.o_win_count.BackColor = System.Drawing.Color.Black;
 			this.o_win_count.ForeColor = System.Drawing.Color.Fuchsia;
-			this.o_win_count.Location = new System.Drawing.Point(275, 317);
+			this.o_win_count.Location = new System.Drawing.Point(273, 317);
 			this.o_win_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.o_win_count.Name = "o_win_count";
 			this.o_win_count.Size = new System.Drawing.Size(14, 14);

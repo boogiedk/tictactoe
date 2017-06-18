@@ -28,6 +28,17 @@ namespace wf_TicTacToe
 			player1 = n1;
 			player2 = n2;
 			}
+		private void setDefaultNamesPlayers()
+			{
+			if(player1=="")
+				{
+				player1 = "X win";
+				}
+			if(player2=="")
+				{
+				player2 = "O win";
+				}
+			}
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
 			{
 			MessageBox.Show("BOOGIE INC (c) 2017", "TicTacToe About");
@@ -58,9 +69,9 @@ namespace wf_TicTacToe
 				}
 			}
 
-		public static void get_against_computer(bool start)
+		public static void get_against_computer(bool ready_bot)
 			{
-			against_computer = start;
+			against_computer = ready_bot;
 			}
 
 		private void computer_make_move() // bot
@@ -362,7 +373,6 @@ namespace wf_TicTacToe
 
 		private void resetResultToolStripMenuItem_Click(object sender, EventArgs e)
 			{
-
 			o_win_count.Text = "0";
 			x_win_count.Text = "0";
 			draw_count.Text = "0";
@@ -373,20 +383,11 @@ namespace wf_TicTacToe
 			Form2 f2 = new Form2();
 			f2.ShowDialog();
 
-				if (player1 == "")
-					{
-					player1 = "X";
-					}
-				if (player2 == "")
-					{
-					player2 = "O";
-					}
-		
-			else
-				{
+			setDefaultNamesPlayers();
+
 				label1.Text = player1;
 				label3.Text = player2;
-				}
+
 			}
 		public static Form1 SelfRef
 			{

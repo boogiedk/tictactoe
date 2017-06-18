@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="wf_TicTacToe.exe" size="292352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="wf_TicTacToe.exe" size="137728">
       <assemblyIdentity name="wf_TicTacToe" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>m7Mc/6m1t+MNa+z+GAlQ1HThw8b8iINsW5tg1YXqt6w=</dsig:DigestValue>
+        <dsig:DigestValue>ua4nH1nNE4fBxL9vkrmqRRJ1Kjgw5Zrajo1scwekvaI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
