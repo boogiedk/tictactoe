@@ -20,22 +20,16 @@ namespace wf_TicTacToe
 		private void button1_Click(object sender, EventArgs e)
 			{
 			Form1.setPlayersNames(p1.Text, p2.Text);
+	
+			Form1.get_against_computer(botOrPlayer.Checked);
+
 			this.Close();
 			}
-
+		
 		private void p2_KeyPress(object sender, KeyPressEventArgs e)
 			{
 			if (e.KeyChar.ToString() == "\r")
 				button1.PerformClick();
-			}
-
-		private void botOrPlayer_CheckedChanged(object sender, EventArgs e)
-			{
-			Do_Checked();
-			}
-		private void Do_Checked()
-			{
-			button1.Enabled = botOrPlayer.Checked;
 			}
 		}
 	}

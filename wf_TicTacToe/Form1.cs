@@ -15,7 +15,7 @@ namespace wf_TicTacToe
 		bool turn = true; // true = X turn; false = Y turn;
 		int turn_count = 0;
 		static String player1, player2;
-		public bool against_computer = false;
+		static bool against_computer = false;
 
 		public Form1()
 			{
@@ -56,6 +56,11 @@ namespace wf_TicTacToe
 				{
 				computer_make_move();
 				}
+			}
+
+		public static void get_against_computer(bool start)
+			{
+			against_computer = start;
 			}
 
 		private void computer_make_move() // bot
@@ -367,24 +372,21 @@ namespace wf_TicTacToe
 			{
 			Form2 f2 = new Form2();
 			f2.ShowDialog();
-			if (player1 == "")
-				{
-				player1 = "X";
-				}
-			else if(player2=="")
-				{
-				player2 = "O";
-				}
+
+				if (player1 == "")
+					{
+					player1 = "X";
+					}
+				if (player2 == "")
+					{
+					player2 = "O";
+					}
+		
 			else
 				{
 				label1.Text = player1;
 				label3.Text = player2;
 				}
-
-			if(player2=="bot")
-				against_computer = true;
-				else
-				against_computer=false;
 			}
 		public static Form1 SelfRef
 			{

@@ -104,7 +104,6 @@
 			this.botOrPlayer.TabIndex = 5;
 			this.botOrPlayer.Text = "Play with COMPUTER";
 			this.botOrPlayer.UseVisualStyleBackColor = false;
-			this.botOrPlayer.CheckedChanged += new System.EventHandler(this.botOrPlayer_CheckedChanged);
 			// 
 			// Form2
 			// 
