@@ -112,7 +112,7 @@
 			// textBoxLogin
 			// 
 			this.textBoxLogin.Location = new System.Drawing.Point(12, 278);
-			this.textBoxLogin.MaxLength = 6;
+			this.textBoxLogin.MaxLength = 8;
 			this.textBoxLogin.Name = "textBoxLogin";
 			this.textBoxLogin.Size = new System.Drawing.Size(100, 20);
 			this.textBoxLogin.TabIndex = 6;

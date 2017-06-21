@@ -261,13 +261,13 @@ namespace wf_TicTacToe
 				there_is_a_winner = true;
 
 
-
+	
 			if (there_is_a_winner)
 				{
 
 				disableButtons();
-
-
+				
+			
 				string winner = "";
 				if (turn)
 					{

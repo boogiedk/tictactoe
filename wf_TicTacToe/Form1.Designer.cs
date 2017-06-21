@@ -300,7 +300,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Cursor = System.Windows.Forms.Cursors.Cross;
+			this.label1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
 			this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.label1.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -314,6 +314,7 @@
 			this.label1.TabIndex = 10;
 			this.label1.Text = "X Win ";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.label1.UseWaitCursor = true;
 			// 
 			// label2
 			// 

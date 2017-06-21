@@ -11,7 +11,6 @@ namespace wf_TicTacToe
 		{
 		static String login;
 		static String password;
-		static string[] bar_menu = { "login", " ", "password" };
 		static public bool registration = false;
 
 		static public void setLoginPlayer(String n1)
@@ -23,6 +22,7 @@ namespace wf_TicTacToe
 			{
 			password = n1;
 			}
+
 		static private void CreateDirectory()
 			{
 			DirectoryInfo TicTacToe = new DirectoryInfo(@"C:\");
@@ -67,24 +67,36 @@ namespace wf_TicTacToe
 		static private void CreateNewPlayer()
 			{
 			SearchPlayer();
-			if (registration)
+			try
 				{
-				StreamWriter profile = new StreamWriter(@"C:\TicTacToe Game\Profile\Profile.txt", true);
-				profile.WriteLine(login + " " + password + "\n");
-				profile.Close();
-				Console.WriteLine("Register is Done!");
+				if (registration)
+					{
+					StreamWriter profile = new StreamWriter(@"C:\TicTacToe Game\Profile\Profile.txt", true);
+					profile.WriteLine(login + " " + password + "\n");
+					profile.Close();
+					Console.WriteLine("Register is Done!");
+					}
 				}
+			catch {}
 			}
 
+		static private void CheckTextLoginAndPassword(String n1, String n2)
+			{
+			if ((n1 == "") || (n2 == ""))
+				{
+				Console.WriteLine("Enter your Login or Password!");
+				registration = false;
+				}
+			}
 		static public void Registration(String n1, String n2)
 			{
 			setLoginPlayer(n1);
 			setPasswordPlayer(n2);
 			CreateDirectory();
 			CreateProfileFIle();
+			CheckTextLoginAndPassword(n1,n2);
 			CreateNewPlayer();
 			}
-	
 		}
 	} 
 

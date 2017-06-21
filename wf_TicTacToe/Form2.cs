@@ -13,6 +13,7 @@ namespace wf_TicTacToe
 	{
 	public partial class Form2 : Form
 		{
+		bool result_check = false;
 		public Form2()
 			{
 			InitializeComponent();
@@ -33,32 +34,43 @@ namespace wf_TicTacToe
 				button1.PerformClick();
 			}
 
-		private void CheckTextLoginAndPassword()
+			private void CheckTextLoginAndPassword()
 			{
 			if(textBoxLogin.Text == "")
 				{
 				MessageBox.Show("Enter your Login!");
+				result_check = false;
 				}
 			else if(textBoxPassword.Text=="")
 				{
 				MessageBox.Show("Enter your Password!");
+				result_check = false;
+				}
+			else
+				{
+				result_check = true;
 				}
 			}
 		private void button2_Click(object sender, EventArgs e)
 			{
+
 			CheckTextLoginAndPassword();
-			DateSetting.Registration(textBoxLogin.Text, textBoxPassword.Text);
-			if (DateSetting.registration)
+
+			if (result_check)
 				{
-				MessageBox.Show(textBoxLogin.Text + " is registered!");
-				Form1.setPlayersNames(textBoxLogin.Text, "");
-				this.Hide();
-				Form1 f1 = new Form1();
-				f1.Show();
-				}
-			else
-				{
-				MessageBox.Show(textBoxLogin.Text + " registered already! Try again!");
+				DateSetting.Registration(textBoxLogin.Text, textBoxPassword.Text);
+				if (DateSetting.registration)
+					{
+					MessageBox.Show(textBoxLogin.Text + " is registered!");
+					Form1.setPlayersNames(textBoxLogin.Text, "");
+					this.Hide();
+					Form1 f1 = new Form1();
+					f1.Show();
+					}
+				else
+					{
+					MessageBox.Show(textBoxLogin.Text + " registered already! Try again!");
+					}
 				}
 			}
 		}
