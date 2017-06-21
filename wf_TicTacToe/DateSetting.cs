@@ -10,32 +10,26 @@ namespace wf_TicTacToe
 	static class DateSetting
 		{
 		static String login;
-		static int age;
-
+		static String password;
+		static string[] bar_menu = { "login", " ", "password" };
+		static bool registration = false;
 
 		static public void setLoginPlayer(String n1)
 			{
 			login = n1;
 			}
-	static	public void setAgePlayer(int n1)
+
+		static public void setPasswordPlayer(String n1)
 			{
-			age = n1;
+			password = n1;
 			}
-
-	static	private void CreateDirectory()
+		static private void CreateDirectory()
 			{
-
-			/* StreamWriter write_text;  //Класс для записи в файл
-			FileInfo file = new FileInfo("C://config.txt");
-			write_text = file.AppendText(); //Дописываем инфу в файл, если файла не существует он создастся
-			write_text.WriteLine(login, " ", age); //Записываем в файл текст из текстового поля
-			write_text.Close(); // Закрываем файл
-			 */
 			DirectoryInfo TicTacToe = new DirectoryInfo(@"C:\");
 			try
 				{
-				TicTacToe.CreateSubdirectory("System");
-				TicTacToe.CreateSubdirectory(@"System\Profile");
+				TicTacToe.CreateSubdirectory("TicTacToe Game");
+				TicTacToe.CreateSubdirectory(@"TicTacToe Game\Profile");
 				}
 			catch (IOException e)
 				{
@@ -43,15 +37,57 @@ namespace wf_TicTacToe
 				}
 			}
 
-	static private void CreateProfile()
-		{
-		FileInfo profile = new FileInfo(@"F:\Profile.txt");
-		}
+		static private void CreateProfileFIle()
+			{
+			FileInfo profile = new FileInfo(@"C:\TicTacToe Game\Profile\Profile.txt");
+			FileStream s = profile.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite);
+			s.Close();
+			}
 
-	static private void CreatePlayer()
-		{
-		FileInfo profile = new FileInfo(@"F:\Profile.txt");
-		FileStream s = profile.Open(FileMode.Append, FileAccess.Read);
-		}
+		static private void SearchPlayer()
+			{
+			StreamReader profile = new StreamReader(@"C:\TicTacToe Game\Profile\Profile.txt", Encoding.Default);
+			while (!profile.EndOfStream)
+				{
+				string st = profile.ReadLine();
+				if (st.StartsWith(login))
+					{
+					Console.WriteLine("Registed!");
+					registration = false;
+					break;
+					}
+				else
+					{
+					registration = true;
+					}
+				}
+			profile.Close();
+			}
+
+		static private void CreateNewPlayer()
+			{
+			SearchPlayer();
+			if (registration)
+				{
+				StreamWriter profile = new StreamWriter(@"C:\TicTacToe Game\Profile\Profile.txt", true);
+				profile.WriteLine(login + " " + password + "\n");
+				profile.Close();
+				Console.WriteLine("Register is Done!");
+				}
+			}
+
+		static public void Regisrtation(String n1, String n2)
+			{
+			setLoginPlayer(n1);
+			setPasswordPlayer(n2);
+			CreateDirectory();
+			CreateProfileFIle();
+			CreateNewPlayer();
+			}
+	
 		}
 	}
+
+
+
+

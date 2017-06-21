@@ -35,6 +35,9 @@
 			this.p2 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.botOrPlayer = new System.Windows.Forms.CheckBox();
+			this.textBoxLogin = new System.Windows.Forms.TextBox();
+			this.textBoxPassword = new System.Windows.Forms.TextBox();
+			this.button2 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -105,6 +108,29 @@
 			this.botOrPlayer.Text = "Play with COMPUTER";
 			this.botOrPlayer.UseVisualStyleBackColor = false;
 			// 
+			// textBoxLogin
+			// 
+			this.textBoxLogin.Location = new System.Drawing.Point(41, 242);
+			this.textBoxLogin.Name = "textBoxLogin";
+			this.textBoxLogin.Size = new System.Drawing.Size(100, 20);
+			this.textBoxLogin.TabIndex = 6;
+			// 
+			// textBoxPassword
+			// 
+			this.textBoxPassword.Location = new System.Drawing.Point(41, 292);
+			this.textBoxPassword.Name = "textBoxPassword";
+			this.textBoxPassword.Size = new System.Drawing.Size(100, 20);
+			this.textBoxPassword.TabIndex = 7;
+			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(41, 340);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.TabIndex = 8;
+			this.button2.Text = "OK";
+			this.button2.UseVisualStyleBackColor = true;
+			// 
 			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +138,9 @@
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(348, 375);
+			this.Controls.Add(this.button2);
+			this.Controls.Add(this.textBoxPassword);
+			this.Controls.Add(this.textBoxLogin);
 			this.Controls.Add(this.botOrPlayer);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.p2);
@@ -136,5 +165,8 @@
 		private System.Windows.Forms.TextBox p2;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.CheckBox botOrPlayer;
+		private System.Windows.Forms.TextBox textBoxLogin;
+		private System.Windows.Forms.TextBox textBoxPassword;
+		private System.Windows.Forms.Button button2;
 		}
 	}

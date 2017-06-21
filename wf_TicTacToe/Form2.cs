@@ -21,7 +21,7 @@ namespace wf_TicTacToe
 			{
 			Form1.setPlayersNames(p1.Text, p2.Text);
 
-			DateSetting.setLoginPlayer(p1.Text);
+			DateSetting.Regisrtation(textBoxLogin.Text, textBoxPassword.Text);
 	
 			Form1.get_against_computer(botOrPlayer.Checked);
 
