@@ -22,7 +22,6 @@ namespace wf_TicTacToe
 		public Form1()
 			{
 			InitializeComponent();
-			SelfRef = this;
 			}
 
 		public static void setPlayersNames(String n1, String n2)
@@ -32,11 +31,11 @@ namespace wf_TicTacToe
 			}
 		private void setDefaultNamesPlayers()
 			{
-			if(player1=="")
+			if (player1 == "")
 				{
 				player1 = "X win";
 				}
-			if(player2=="")
+			if (player2 == "")
 				{
 				player2 = "O win";
 				}
@@ -65,7 +64,7 @@ namespace wf_TicTacToe
 
 			checkForWinner();
 
-			if((!turn) && (against_computer))
+			if ((!turn) && (against_computer))
 				{
 				computer_make_move();
 				}
@@ -100,7 +99,7 @@ namespace wf_TicTacToe
 		private Button look_for_corner()
 			{
 			Console.WriteLine("Looking for corner");
-			if(A1.Text=="O")
+			if (A1.Text == "O")
 				{
 				if (A3.Text == "")
 					return A3;
@@ -110,7 +109,7 @@ namespace wf_TicTacToe
 					return C1;
 				}
 
-			if(A3.Text=="O")
+			if (A3.Text == "O")
 				{
 				if (A1.Text == "")
 					return A1;
@@ -120,7 +119,7 @@ namespace wf_TicTacToe
 					return C1;
 				}
 
-			if(C3.Text=="O")
+			if (C3.Text == "O")
 				{
 				if (A1.Text == "")
 					return A1;
@@ -130,7 +129,7 @@ namespace wf_TicTacToe
 					return C1;
 				}
 
-			if(A1.Text=="O")
+			if (A1.Text == "O")
 				{
 				if (A1.Text == "")
 					return A3;
@@ -155,10 +154,10 @@ namespace wf_TicTacToe
 			{
 			Console.WriteLine("Looking for open space");
 			Button b = null;
-			foreach(Control c in Controls)
+			foreach (Control c in Controls)
 				{
 				b = c as Button;
-				if(b!=null)
+				if (b != null)
 					{
 					if (b.Text == "")
 						return b;
@@ -173,11 +172,11 @@ namespace wf_TicTacToe
 			Console.WriteLine("Looking for win or block: " + mark);
 			//HORIZONTAL TESTS
 			if ((A1.Text == mark) && (A2.Text == mark) && (A3.Text == ""))
-			return A3;
+				return A3;
 			if ((A2.Text == mark) && (A3.Text == mark) && (A1.Text == ""))
-			return A1;
+				return A1;
 			if ((A1.Text == mark) && (A3.Text == mark) && (A2.Text == ""))
-			return A2;
+				return A2;
 			//
 			if ((B1.Text == mark) && (B2.Text == mark) && (B3.Text == ""))
 				return B3;
@@ -261,7 +260,7 @@ namespace wf_TicTacToe
 			else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
 				there_is_a_winner = true;
 
-			
+
 
 			if (there_is_a_winner)
 				{
@@ -303,20 +302,20 @@ namespace wf_TicTacToe
 
 		public void newGame()
 			{
-				turn = true;
-					turn_count = 0;
+			turn = true;
+			turn_count = 0;
 
-					foreach (Control c in Controls)
-						{
-						try
-							{
-							Button b = (Button)c;
-							b.Enabled = true;
-							b.Text = "";
-							}//end try
+			foreach (Control c in Controls)
+				{
+				try
+					{
+					Button b = (Button)c;
+					b.Enabled = true;
+					b.Text = "";
+					}//end try
 
-						catch { }
-						}//end foreach
+				catch { }
+				}//end foreach
 			}// end new game
 
 
@@ -382,27 +381,14 @@ namespace wf_TicTacToe
 
 		private void Form1_Load(object sender, EventArgs e)
 			{
-			Form2 f2 = new Form2();
-			f2.ShowDialog();
-
 			setDefaultNamesPlayers();
 
-				label1.Text = player1;
-				label3.Text = player2;
+			label1.Text = player1;
+			label3.Text = player2;
 
 			}
-		public static Form1 SelfRef
-			{
-			get;
-			set;
-			}
-
-		internal static void setPlayersNames(string p)
-			{
-			throw new NotImplementedException();
-			}
 		}
-		}
+	}
 
 
 

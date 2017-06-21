@@ -76,7 +76,7 @@ namespace wf_TicTacToe
 				}
 			}
 
-		static public void Regisrtation(String n1, String n2)
+		static public void Registration(String n1, String n2)
 			{
 			setLoginPlayer(n1);
 			setPasswordPlayer(n2);
@@ -86,7 +86,7 @@ namespace wf_TicTacToe
 			}
 	
 		}
-	}
+	} 
 
 
 

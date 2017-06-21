@@ -17,15 +17,14 @@ namespace wf_TicTacToe
 			{
 			InitializeComponent();
 			}
+
 		private void button1_Click(object sender, EventArgs e)
 			{
 			Form1.setPlayersNames(p1.Text, p2.Text);
-	
 			Form1.get_against_computer(botOrPlayer.Checked);
-
-			this.Close();
-
-
+			this.Hide();
+			Form1 f1 = new Form1();
+			f1.Show();
 			}
 		
 		private void p2_KeyPress(object sender, KeyPressEventArgs e)
@@ -48,11 +47,14 @@ namespace wf_TicTacToe
 		private void button2_Click(object sender, EventArgs e)
 			{
 			CheckTextLoginAndPassword();
-			DateSetting.Regisrtation(textBoxLogin.Text, textBoxPassword.Text);
+			DateSetting.Registration(textBoxLogin.Text, textBoxPassword.Text);
 			if (DateSetting.registration)
 				{
 				MessageBox.Show(textBoxLogin.Text + " is registered!");
-				Form1.setPlayersNames(textBoxLogin.Text);
+				Form1.setPlayersNames(textBoxLogin.Text, "");
+				this.Hide();
+				Form1 f1 = new Form1();
+				f1.Show();
 				}
 			else
 				{
