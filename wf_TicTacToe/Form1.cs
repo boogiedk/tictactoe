@@ -396,7 +396,12 @@ namespace wf_TicTacToe
 			get;
 			set;
 			}
+
+		internal static void setPlayersNames(string p)
+			{
+			throw new NotImplementedException();
 			}
+		}
 		}
 
 

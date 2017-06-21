@@ -20,8 +20,6 @@ namespace wf_TicTacToe
 		private void button1_Click(object sender, EventArgs e)
 			{
 			Form1.setPlayersNames(p1.Text, p2.Text);
-
-			DateSetting.Regisrtation(textBoxLogin.Text, textBoxPassword.Text);
 	
 			Form1.get_against_computer(botOrPlayer.Checked);
 
@@ -34,6 +32,32 @@ namespace wf_TicTacToe
 			{
 			if (e.KeyChar.ToString() == "\r")
 				button1.PerformClick();
+			}
+
+		private void CheckTextLoginAndPassword()
+			{
+			if(textBoxLogin.Text == "")
+				{
+				MessageBox.Show("Enter your Login!");
+				}
+			else if(textBoxPassword.Text=="")
+				{
+				MessageBox.Show("Enter your Password!");
+				}
+			}
+		private void button2_Click(object sender, EventArgs e)
+			{
+			CheckTextLoginAndPassword();
+			DateSetting.Regisrtation(textBoxLogin.Text, textBoxPassword.Text);
+			if (DateSetting.registration)
+				{
+				MessageBox.Show(textBoxLogin.Text + " is registered!");
+				Form1.setPlayersNames(textBoxLogin.Text);
+				}
+			else
+				{
+				MessageBox.Show(textBoxLogin.Text + " registered already! Try again!");
+				}
 			}
 		}
 	}

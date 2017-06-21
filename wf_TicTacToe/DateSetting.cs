@@ -12,7 +12,7 @@ namespace wf_TicTacToe
 		static String login;
 		static String password;
 		static string[] bar_menu = { "login", " ", "password" };
-		static bool registration = false;
+		static public bool registration = false;
 
 		static public void setLoginPlayer(String n1)
 			{
