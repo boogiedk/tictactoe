@@ -12,6 +12,8 @@ namespace wf_TicTacToe
 		static String login;
 		static String password;
 		static public bool registration = false;
+		static public bool logInLogin = false;
+		static public bool LogInPas = false;
 
 		static public void setLoginPlayer(String n1)
 			{
@@ -44,7 +46,7 @@ namespace wf_TicTacToe
 			s.Close();
 			}
 
-		static private void SearchPlayer()
+		static public void SearchPlayer()
 			{
 			StreamReader profile = new StreamReader(@"C:\TicTacToe Game\Profile\Profile.txt", Encoding.Default);
 			while (!profile.EndOfStream)
@@ -54,14 +56,40 @@ namespace wf_TicTacToe
 					{
 					Console.WriteLine("Registed!");
 					registration = false;
+					logInLogin = true;
 					break;
 					}
 				else
 					{
 					registration = true;
+					logInLogin = false;
 					}
 				}
 			profile.Close();
+			}
+
+		static public void CheckPasswordPlayer(String n2)
+			{
+			if(registration)
+				{
+					StreamReader CheckPassword = new StreamReader(@"C:\TicTacToe Game\Profile\Profile.txt", Encoding.Default);
+					while (!CheckPassword.EndOfStream)
+						{
+						string st = CheckPassword.ReadLine();
+						if (st.StartsWith(n2))
+							{
+							Console.WriteLine("Done!");
+							LogInPas = true;
+							break;
+							}
+						else
+							{
+							registration = true;
+							LogInPas = false;
+							}
+						}
+					CheckPassword.Close();
+				}
 			}
 
 		static private void CreateNewPlayer()
@@ -96,6 +124,15 @@ namespace wf_TicTacToe
 			CreateProfileFIle();
 			CheckTextLoginAndPassword(n1,n2);
 			CreateNewPlayer();
+			}
+
+		static public void LogInPlayer(String n1, String n2)
+			{
+			setLoginPlayer(n1);
+			setPasswordPlayer(n2);
+			CreateProfileFIle();
+			SearchPlayer();
+			CheckPasswordPlayer(n2);
 			}
 		}
 	} 

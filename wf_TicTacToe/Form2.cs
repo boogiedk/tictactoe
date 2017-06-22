@@ -73,5 +73,24 @@ namespace wf_TicTacToe
 					}
 				}
 			}
+
+		private void button3_Click(object sender, EventArgs e)
+			{
+			DateSetting.LogInPlayer(textBox1.Text, textBox2.Text);
+			if (DateSetting.logInLogin)
+				{
+				if (DateSetting.LogInPas)
+					{
+					Form1.setPlayersNames(textBox1.Text, "");
+					this.Hide();
+					Form1 f1 = new Form1();
+					f1.Show();
+					}
+				else
+					MessageBox.Show("invalid password!");
+				}
+			else
+				MessageBox.Show("invalid login!");
+			}
 		}
 	}
