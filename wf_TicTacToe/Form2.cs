@@ -38,12 +38,12 @@ namespace wf_TicTacToe
 			{
 			if(textBoxLogin.Text == "")
 				{
-				MessageBox.Show("Enter your Login!");
+				MessageBox.Show("Enter your Login!11111");
 				result_check = false;
 				}
 			else if(textBoxPassword.Text=="")
 				{
-				MessageBox.Show("Enter your Password!");
+				MessageBox.Show("Enter your Password!11111");
 				result_check = false;
 				}
 			else
@@ -51,11 +51,10 @@ namespace wf_TicTacToe
 				result_check = true;
 				}
 			}
+
 		private void button2_Click(object sender, EventArgs e)
 			{
-
 			CheckTextLoginAndPassword();
-
 			if (result_check)
 				{
 				DateSetting.Registration(textBoxLogin.Text, textBoxPassword.Text);
@@ -63,9 +62,8 @@ namespace wf_TicTacToe
 					{
 					MessageBox.Show(textBoxLogin.Text + " is registered!");
 					Form1.setPlayersNames(textBoxLogin.Text, "");
-					this.Hide();
-					Form1 f1 = new Form1();
-					f1.Show();
+					textBoxLogin.Clear();
+					textBoxPassword.Clear();
 					}
 				else
 					{
@@ -76,22 +74,18 @@ namespace wf_TicTacToe
 
 		private void button3_Click(object sender, EventArgs e)
 			{
+
 			DateSetting.LogInPlayer(textBox1.Text, textBox2.Text);
 
 			if (DateSetting.logInLogin)
 				{
 				if (DateSetting.LogInPas)
 					{
-					if (DateSetting.check_rule)
-						{
-						MessageBox.Show("Connected!");
-						Form1.setPlayersNames(textBox1.Text, "");
-						this.Hide();
-						Form1 f1 = new Form1();
-						f1.Show();
-						}
-					else
-						MessageBox.Show("What is wrong with you?");
+					MessageBox.Show("Connected!");
+					Form1.setPlayersNames(textBox1.Text, "");
+					this.Hide();
+					Form1 f1 = new Form1();
+					f1.Show();
 					}
 				else
 					MessageBox.Show("invalid password!");
@@ -99,7 +93,5 @@ namespace wf_TicTacToe
 			else
 				MessageBox.Show("invalid login!");
 			}
-
-
 		}
 	}

@@ -15,6 +15,7 @@ namespace wf_TicTacToe
 		static public bool logInLogin = false;
 		static public bool LogInPas = false;
 		static public bool check_rule = false;
+
 		static public void setLoginPlayer(String n1)
 			{
 			login = n1;
@@ -84,7 +85,6 @@ namespace wf_TicTacToe
 							}
 						else
 							{
-							registration = true;
 							LogInPas = false;
 							}
 						}
@@ -110,13 +110,20 @@ namespace wf_TicTacToe
 
 		static private void CheckTextLoginAndPassword(String n1, String n2)
 			{
-			if ((n1 == "") || (n2 == ""))
+			if (n1 == "")
 				{
-				Console.WriteLine("Enter your Login or Password!");
-				registration = false;
 				check_rule = false;
 				}
+			else if (n2 == "")
+				{
+				check_rule = false;
+				}
+			else
+				{
+				check_rule = true;
+				}
 			}
+		
 
 		static private void CheckRule()
 			{

@@ -318,7 +318,6 @@ namespace wf_TicTacToe
 				}//end foreach
 			}// end new game
 
-
 		private void disableButtons()
 			{
 			foreach (Control c in Controls)
