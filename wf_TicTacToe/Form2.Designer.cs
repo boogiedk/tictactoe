@@ -116,24 +116,28 @@
 			// 
 			// textBoxLogin
 			// 
-			this.textBoxLogin.Location = new System.Drawing.Point(12, 278);
+			this.textBoxLogin.BackColor = System.Drawing.Color.Fuchsia;
+			this.textBoxLogin.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBoxLogin.Location = new System.Drawing.Point(20, 278);
 			this.textBoxLogin.MaxLength = 8;
 			this.textBoxLogin.Name = "textBoxLogin";
-			this.textBoxLogin.Size = new System.Drawing.Size(100, 20);
+			this.textBoxLogin.Size = new System.Drawing.Size(100, 21);
 			this.textBoxLogin.TabIndex = 6;
 			// 
 			// textBoxPassword
 			// 
-			this.textBoxPassword.Location = new System.Drawing.Point(12, 304);
+			this.textBoxPassword.BackColor = System.Drawing.Color.Fuchsia;
+			this.textBoxPassword.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBoxPassword.Location = new System.Drawing.Point(20, 309);
 			this.textBoxPassword.MaxLength = 16;
 			this.textBoxPassword.Name = "textBoxPassword";
-			this.textBoxPassword.Size = new System.Drawing.Size(100, 20);
+			this.textBoxPassword.Size = new System.Drawing.Size(100, 21);
 			this.textBoxPassword.TabIndex = 7;
 			this.textBoxPassword.UseSystemPasswordChar = true;
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(12, 340);
+			this.button2.Location = new System.Drawing.Point(33, 340);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 8;
@@ -156,33 +160,41 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(218, 247);
+			this.label4.BackColor = System.Drawing.Color.Transparent;
+			this.label4.Cursor = System.Windows.Forms.Cursors.Cross;
+			this.label4.Font = new System.Drawing.Font("Blade Runner Movie Font", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.ForeColor = System.Drawing.Color.Magenta;
+			this.label4.Location = new System.Drawing.Point(246, 247);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(35, 13);
+			this.label4.Size = new System.Drawing.Size(61, 16);
 			this.label4.TabIndex = 10;
-			this.label4.Text = "label4";
+			this.label4.Text = "Log In";
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(206, 278);
+			this.textBox1.BackColor = System.Drawing.Color.Fuchsia;
+			this.textBox1.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox1.Location = new System.Drawing.Point(226, 273);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 20);
+			this.textBox1.Size = new System.Drawing.Size(100, 21);
 			this.textBox1.TabIndex = 11;
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(206, 303);
+			this.textBox2.BackColor = System.Drawing.Color.Fuchsia;
+			this.textBox2.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox2.Location = new System.Drawing.Point(226, 306);
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(100, 20);
+			this.textBox2.Size = new System.Drawing.Size(100, 21);
 			this.textBox2.TabIndex = 12;
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(206, 340);
+			this.button3.Location = new System.Drawing.Point(232, 339);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(75, 23);
 			this.button3.TabIndex = 13;
-			this.button3.Text = "button3";
+			this.button3.Text = "Log In";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 

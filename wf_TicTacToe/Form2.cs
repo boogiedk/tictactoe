@@ -81,10 +81,16 @@ namespace wf_TicTacToe
 				{
 				if (DateSetting.LogInPas)
 					{
-					Form1.setPlayersNames(textBox1.Text, "");
-					this.Hide();
-					Form1 f1 = new Form1();
-					f1.Show();
+					if (DateSetting.check_rule)
+						{
+						MessageBox.Show("Connected!");
+						Form1.setPlayersNames(textBox1.Text, "");
+						this.Hide();
+						Form1 f1 = new Form1();
+						f1.Show();
+						}
+					else
+						MessageBox.Show("What is wrong with you?");
 					}
 				else
 					MessageBox.Show("invalid password!");
