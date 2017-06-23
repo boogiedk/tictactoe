@@ -77,6 +77,7 @@ namespace wf_TicTacToe
 		private void button3_Click(object sender, EventArgs e)
 			{
 			DateSetting.LogInPlayer(textBox1.Text, textBox2.Text);
+
 			if (DateSetting.logInLogin)
 				{
 				if (DateSetting.LogInPas)
@@ -98,5 +99,7 @@ namespace wf_TicTacToe
 			else
 				MessageBox.Show("invalid login!");
 			}
+
+
 		}
 	}

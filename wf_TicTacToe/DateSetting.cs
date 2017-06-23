@@ -46,7 +46,7 @@ namespace wf_TicTacToe
 			s.Close();
 			}
 
-		static public void SearchPlayer()
+		static private void SearchPlayer()
 			{
 			StreamReader profile = new StreamReader(@"C:\TicTacToe Game\Profile\Profile.txt", Encoding.Default);
 			while (!profile.EndOfStream)
@@ -68,7 +68,7 @@ namespace wf_TicTacToe
 			profile.Close();
 			}
 
-		static public void CheckPasswordPlayer()
+		static private void CheckPasswordPlayer()
 			{
 			if(logInLogin)
 				{

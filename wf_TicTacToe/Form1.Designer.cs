@@ -144,7 +144,6 @@
 			// A1
 			// 
 			this.A1.BackColor = System.Drawing.Color.Black;
-			this.A1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("A1.BackgroundImage")));
 			this.A1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
 			this.A1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.A1.Font = new System.Drawing.Font("Blade Runner Movie Font", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,14 +161,12 @@
 			// A2
 			// 
 			this.A2.BackColor = System.Drawing.Color.Black;
-			this.A2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("A2.BackgroundImage")));
 			this.A2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.A2.Font = new System.Drawing.Font("Blade Runner Movie Font", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.A2.Image = ((System.Drawing.Image)(resources.GetObject("A2.Image")));
 			this.A2.Location = new System.Drawing.Point(124, 31);
 			this.A2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			this.A2.Name = "A2";
-			this.A2.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.A2.Size = new System.Drawing.Size(100, 81);
 			this.A2.TabIndex = 2;
 			this.A2.UseVisualStyleBackColor = false;
@@ -305,7 +302,7 @@
 			this.label1.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.Color.Fuchsia;
-			this.label1.Location = new System.Drawing.Point(14, 298);
+			this.label1.Location = new System.Drawing.Point(10, 308);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.MaximumSize = new System.Drawing.Size(105, 14);
 			this.label1.MinimumSize = new System.Drawing.Size(105, 14);
@@ -324,7 +321,7 @@
 			this.label2.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.Color.Fuchsia;
-			this.label2.Location = new System.Drawing.Point(125, 298);
+			this.label2.Location = new System.Drawing.Point(121, 308);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.MaximumSize = new System.Drawing.Size(105, 14);
 			this.label2.MinimumSize = new System.Drawing.Size(105, 14);
@@ -341,7 +338,7 @@
 			this.label3.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.Fuchsia;
-			this.label3.Location = new System.Drawing.Point(228, 298);
+			this.label3.Location = new System.Drawing.Point(224, 308);
 			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label3.MaximumSize = new System.Drawing.Size(105, 14);
 			this.label3.MinimumSize = new System.Drawing.Size(105, 14);
@@ -354,9 +351,9 @@
 			// x_win_count
 			// 
 			this.x_win_count.AutoSize = true;
-			this.x_win_count.BackColor = System.Drawing.Color.Black;
+			this.x_win_count.BackColor = System.Drawing.Color.Transparent;
 			this.x_win_count.ForeColor = System.Drawing.Color.Fuchsia;
-			this.x_win_count.Location = new System.Drawing.Point(59, 317);
+			this.x_win_count.Location = new System.Drawing.Point(55, 327);
 			this.x_win_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.x_win_count.Name = "x_win_count";
 			this.x_win_count.Size = new System.Drawing.Size(14, 14);
@@ -366,9 +363,9 @@
 			// draw_count
 			// 
 			this.draw_count.AutoSize = true;
-			this.draw_count.BackColor = System.Drawing.Color.Black;
+			this.draw_count.BackColor = System.Drawing.Color.Transparent;
 			this.draw_count.ForeColor = System.Drawing.Color.Fuchsia;
-			this.draw_count.Location = new System.Drawing.Point(170, 317);
+			this.draw_count.Location = new System.Drawing.Point(166, 327);
 			this.draw_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.draw_count.Name = "draw_count";
 			this.draw_count.Size = new System.Drawing.Size(14, 14);
@@ -378,9 +375,9 @@
 			// o_win_count
 			// 
 			this.o_win_count.AutoSize = true;
-			this.o_win_count.BackColor = System.Drawing.Color.Black;
+			this.o_win_count.BackColor = System.Drawing.Color.Transparent;
 			this.o_win_count.ForeColor = System.Drawing.Color.Fuchsia;
-			this.o_win_count.Location = new System.Drawing.Point(273, 317);
+			this.o_win_count.Location = new System.Drawing.Point(269, 327);
 			this.o_win_count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.o_win_count.Name = "o_win_count";
 			this.o_win_count.Size = new System.Drawing.Size(14, 14);

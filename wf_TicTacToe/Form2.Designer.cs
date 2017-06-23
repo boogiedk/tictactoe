@@ -37,12 +37,11 @@
 			this.botOrPlayer = new System.Windows.Forms.CheckBox();
 			this.textBoxLogin = new System.Windows.Forms.TextBox();
 			this.textBoxPassword = new System.Windows.Forms.TextBox();
-			this.button2 = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -93,7 +92,7 @@
 			// 
 			this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
 			this.button1.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(249, 109);
+			this.button1.Location = new System.Drawing.Point(249, 91);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 4;
@@ -107,7 +106,7 @@
 			this.botOrPlayer.BackColor = System.Drawing.Color.Transparent;
 			this.botOrPlayer.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.botOrPlayer.ForeColor = System.Drawing.Color.Fuchsia;
-			this.botOrPlayer.Location = new System.Drawing.Point(165, 73);
+			this.botOrPlayer.Location = new System.Drawing.Point(165, 130);
 			this.botOrPlayer.Name = "botOrPlayer";
 			this.botOrPlayer.Size = new System.Drawing.Size(161, 18);
 			this.botOrPlayer.TabIndex = 5;
@@ -118,7 +117,7 @@
 			// 
 			this.textBoxLogin.BackColor = System.Drawing.Color.Fuchsia;
 			this.textBoxLogin.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxLogin.Location = new System.Drawing.Point(20, 278);
+			this.textBoxLogin.Location = new System.Drawing.Point(20, 273);
 			this.textBoxLogin.MaxLength = 8;
 			this.textBoxLogin.Name = "textBoxLogin";
 			this.textBoxLogin.Size = new System.Drawing.Size(100, 21);
@@ -128,22 +127,12 @@
 			// 
 			this.textBoxPassword.BackColor = System.Drawing.Color.Fuchsia;
 			this.textBoxPassword.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxPassword.Location = new System.Drawing.Point(20, 309);
+			this.textBoxPassword.Location = new System.Drawing.Point(20, 304);
 			this.textBoxPassword.MaxLength = 16;
 			this.textBoxPassword.Name = "textBoxPassword";
 			this.textBoxPassword.Size = new System.Drawing.Size(100, 21);
 			this.textBoxPassword.TabIndex = 7;
 			this.textBoxPassword.UseSystemPasswordChar = true;
-			// 
-			// button2
-			// 
-			this.button2.Location = new System.Drawing.Point(33, 340);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 8;
-			this.button2.Text = "OK";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// label3
 			// 
@@ -174,7 +163,7 @@
 			// 
 			this.textBox1.BackColor = System.Drawing.Color.Fuchsia;
 			this.textBox1.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(226, 273);
+			this.textBox1.Location = new System.Drawing.Point(226, 274);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(100, 21);
 			this.textBox1.TabIndex = 11;
@@ -187,13 +176,28 @@
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(100, 21);
 			this.textBox2.TabIndex = 12;
+			this.textBox2.UseSystemPasswordChar = true;
+			// 
+			// button2
+			// 
+			this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+			this.button2.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button2.Location = new System.Drawing.Point(33, 335);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.TabIndex = 14;
+			this.button2.Text = "OK";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(232, 339);
+			this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+			this.button3.Font = new System.Drawing.Font("Blade Runner Movie Font", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button3.Location = new System.Drawing.Point(239, 338);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(75, 23);
-			this.button3.TabIndex = 13;
+			this.button3.TabIndex = 15;
 			this.button3.Text = "Log In";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -206,11 +210,11 @@
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(348, 375);
 			this.Controls.Add(this.button3);
+			this.Controls.Add(this.button2);
 			this.Controls.Add(this.textBox2);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.button2);
 			this.Controls.Add(this.textBoxPassword);
 			this.Controls.Add(this.textBoxLogin);
 			this.Controls.Add(this.botOrPlayer);
@@ -239,12 +243,11 @@
 		private System.Windows.Forms.CheckBox botOrPlayer;
 		private System.Windows.Forms.TextBox textBoxLogin;
 		private System.Windows.Forms.TextBox textBoxPassword;
-		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button3;
 		}
 	}
