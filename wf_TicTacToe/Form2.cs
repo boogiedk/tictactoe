@@ -34,7 +34,7 @@ namespace wf_TicTacToe
 				button1.PerformClick();
 			}
 
-			private void CheckTextLoginAndPassword()
+		private void CheckTextLoginAndPassword()
 			{
 			if(textBoxLogin.Text == "")
 				{

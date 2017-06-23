@@ -33,6 +33,7 @@ namespace wf_TicTacToe
 				{
 				TicTacToe.CreateSubdirectory("TicTacToe Game");
 				TicTacToe.CreateSubdirectory(@"TicTacToe Game\Profile");
+				TicTacToe.CreateSubdirectory(@"TicTacToe Game\Players");
 				}
 			catch (IOException e)
 				{
@@ -110,11 +111,11 @@ namespace wf_TicTacToe
 
 		static private void CheckTextLoginAndPassword(String n1, String n2)
 			{
-			if (n1 == "")
+			if ((n1 == "") || (n1==" "))
 				{
 				check_rule = false;
 				}
-			else if (n2 == "")
+			else if ((n2 == "") || (n2==" "))
 				{
 				check_rule = false;
 				}
@@ -124,7 +125,6 @@ namespace wf_TicTacToe
 				}
 			}
 		
-
 		static private void CheckRule()
 			{
 			if((logInLogin==true) && (LogInPas==true))
@@ -132,14 +132,17 @@ namespace wf_TicTacToe
 				check_rule = true;
 				}
 			}
+
 		static public void Registration(String n1, String n2)
 			{
 			setLoginPlayer(n1);
 			setPasswordPlayer(n2);
 			CreateDirectory();
 			CreateProfileFIle();
-			CheckTextLoginAndPassword(n1,n2);
 			CreateNewPlayer();
+			CreatePersonalProfile();
+			SetDateAboutPlayer();
+			CheckTextLoginAndPassword(n1, n2);
 			}
 
 		static public void LogInPlayer(String n1, String n2)
@@ -147,12 +150,51 @@ namespace wf_TicTacToe
 			setLoginPlayer(n1);
 			setPasswordPlayer(n2);
 			CreateProfileFIle();
-			SearchPlayer();
+			CreatePersonalProfile();
+			LogInPersonalProfile();
+			SetDateAboutPlayer();
 			CheckPasswordPlayer();
 			CheckTextLoginAndPassword(n1,n2);
 			CheckRule();
 			}
+
+		//             //               //              //            //            //            //            //          //        //
+
+		static private void CreatePersonalProfile()
+			{
+			FileInfo PersonalProfile = new FileInfo(@"C:\TicTacToe Game\Players\" + login + ".txt");
+			FileStream s = PersonalProfile.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite);
+			s.Close();
+			}
+		static private void SetDateAboutPlayer()
+			{
+				StreamWriter PersonalProfile = new StreamWriter(@"C:\TicTacToe Game\Players\" + login + ".txt", true);
+				PersonalProfile.WriteLine(login + " " + password + "\n");
+				PersonalProfile.Close();
+			}
+		static private void LogInPersonalProfile()
+			{
+			StreamReader profile = new StreamReader(@"C:\TicTacToe Game\Players\"+ login + ".txt", Encoding.Default);
+			while (!profile.EndOfStream)
+				{
+				string st = profile.ReadLine();
+				if (st.StartsWith((login)) & (st.StartsWith((password)))) 
+					{
+					Console.WriteLine("Registed!");
+					logInLogin = true;
+					LogInPas=true;
+					break;
+					}
+				else
+					{
+					logInLogin = false;
+					LogInPas=false;
+					}
+				}
+			profile.Close();
+			}
 		}
+		
 	} 
 
 
